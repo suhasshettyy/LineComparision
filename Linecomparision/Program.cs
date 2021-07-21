@@ -7,7 +7,7 @@ namespace Linecomparision
         public static void Main(string[] args)
         {
             linecomparision line = new linecomparision();
-            line.Introduction();
+            line.Length();
         }
     }
 }
