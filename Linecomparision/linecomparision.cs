@@ -38,10 +38,13 @@ namespace Linecomparision
             distance2 = Math.Sqrt(Math.Pow(x4 - x3, 2) + Math.Pow(y4 - y3, 2));
             Console.WriteLine("The length of the line two is :" + distance2);
 
-            if (distance1 == distance2)
-                Console.WriteLine("Both lines are equal");
+            if (distance1.CompareTo(distance2) > 0)
+                Console.WriteLine("The length of line one is greater than the second line.");
+            else if (distance1.CompareTo(distance2) < 0)
+                Console.WriteLine("The length of line two is greater than the first line.");
             else
-                Console.WriteLine("lines are unequal");
+                Console.WriteLine("Both the lines are equal.");
+
         }
     }
 }
