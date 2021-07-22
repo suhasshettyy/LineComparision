@@ -1,13 +1,14 @@
 ﻿using System;
 
-namespace Linecomparision
+namespace LineComparison
 {
     class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            linecomparision line = new linecomparision();
+            Line line = new Line(2, 4, 6, 8);
             line.Length();
+
         }
     }
 }

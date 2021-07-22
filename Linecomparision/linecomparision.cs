@@ -2,50 +2,25 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Linecomparision
+namespace LineComparison
 {
-    class linecomparision
+    public class Line
     {
-        public void Length()
+        public int x1, x2, y1, y2;
+        public Line(int x1, int x2, int y1, int y2)
         {
-            double x1;
-            double y1;
-            double x2;
-            double y2;
-            double x3;
-            double y3;
-            double x4;
-            double y4;
-            double distance1;
-            double distance2;
-
-            Console.WriteLine("Enter the first co-ordinate");
-            x1 = Convert.ToDouble(Console.ReadLine());
-            y1 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter the second co-ordinate");
-            x2 = Convert.ToDouble(Console.ReadLine());
-            y2 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter the third co-ordinate");
-            x3 = Convert.ToDouble(Console.ReadLine());
-            y3 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter the fourth co-ordinate");
-            x4 = Convert.ToDouble(Console.ReadLine());
-            y4 = Convert.ToDouble(Console.ReadLine());
-
-
-            distance1 = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));
-            Console.WriteLine("The length of the line one is:" + distance1);
-            distance2 = Math.Sqrt(Math.Pow(x4 - x3, 2) + Math.Pow(y4 - y3, 2));
-            Console.WriteLine("The length of the line two is :" + distance2);
-
-            if (distance1.CompareTo(distance2) > 0)
-                Console.WriteLine("The length of line one is greater than the second line.");
-            else if (distance1.CompareTo(distance2) < 0)
-                Console.WriteLine("The length of line two is greater than the first line.");
-            else
-                Console.WriteLine("Both the lines are equal.");
+            this.x1 = x1;
+            this.x2 = x2;
+            this.y1 = y1;
+            this.y2 = y2;
 
         }
+
+        public void Length()
+        {
+            double length = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));
+            Console.WriteLine("The length of the line is:" + length);
+        }
+
     }
 }
-
