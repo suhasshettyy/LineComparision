@@ -19,6 +19,11 @@ namespace LineComparison
         /// </summary>
         public double LengthOfLine()
         {
+            Console.WriteLine("---------------------------------------");
+            Console.WriteLine("value of x1 =" + x1);
+            Console.WriteLine("value of x2 =" + x2);
+            Console.WriteLine("value of y1 =" + y1);
+            Console.WriteLine("value of y2 =" + y2);
             double length = Math.Sqrt((x2 - x1) ^ 2 + (y2 - y1) ^ 2);
             return length;
         }
