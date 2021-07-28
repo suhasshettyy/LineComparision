@@ -12,19 +12,16 @@ namespace LineComparison
             double line2 = linecomp2.LengthOfLine();
             Console.WriteLine(" The length of First line is : " + line1);
             Console.WriteLine(" The length of First line is : " + line2);
-            if (line1 == line2)
+            if (line1.CompareTo(line2) == 0)
+                Console.WriteLine("Both lines are equal");
+            else if (line1.CompareTo(line2) > 0)
             {
-                Console.WriteLine("Length of two Lines are equals");
-            }
-            if (line1 > line2)
-            {
-                Console.WriteLine("Line 1 is greater than Line 2");
+                Console.WriteLine("length of first line is greater than second line");
             }
             else
             {
-                Console.WriteLine("Line 1 is lesser than Line 2");
+                Console.WriteLine("lines are not equal and length of first line is less than second line");
             }
-
         }
     }
 }
